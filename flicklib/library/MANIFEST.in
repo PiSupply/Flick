@@ -1,0 +1,6 @@
+include CHANGELOG.txt
+include LICENSE.txt
+include README.txt
+include setup.py
+include flicklib.py
+include i2c.py
