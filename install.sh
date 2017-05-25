@@ -15,7 +15,7 @@ else
    raspi-config nonint do_i2c 0
 
    git clone https://github.com/PiSupply/Flick.git
-   cd Flick
+   cd Flick/library
    python setup.py install
    whiptail --msgbox "The system will now reboot" 8 40
    reboot

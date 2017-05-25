@@ -13,7 +13,7 @@ curl -sSL https://pisupp.ly/flickcode | sudo bash
 # Command Line
 ```bash
 # Run a demo script to test the various gestures
-python ~/Flick/flicklib/examples/flickdemo.py
+python ~/Flick/flick/flickdemo.py
 ```
 
 # Hardware tips
@@ -36,6 +36,5 @@ VCC          -> Pin 1
 controlling LEDs
 
 # Additional information
-
 The Flick boards use the MGC3130 3D gesture controller based on Microchip's patented Gestic© technology. You can find more [Microchips's website](http://www.microchip.com/design-centers/capacitive-touch-sensing/gestic-technology/overview)
 
