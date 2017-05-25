@@ -1,0 +1,5 @@
+0.0.1
+-----
+
+* Initial release derived from Pimoroni's skywriter-hat library
+
