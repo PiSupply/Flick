@@ -33,7 +33,37 @@ SCL          -> Pin 5
 SDA          -> Pin 3
 VCC          -> Pin 1
 ```
-controlling LEDs
+### Controlling the dual LED on Flick large
+We have provided a dual LED for additional customisable feedback on the Flick large. The red LED is connected to Pin 15/GPIO22 whereas the green LED is connected to Pin7/GPIO4.
+You can drive these LEDs programmatically or via the command line.
+
+#### Bash
+This will turn on the green LED
+```bash
+gpio -g mode 22 out
+gpio -g write 22 1
+```
+This will turn off the red LED
+```bash
+gpio -g mode 4 out
+gpio -g write 4 0
+```
+
+#### Python
+This will turn off the green using RPi.GPIO
+```Python
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(22, GPIO.OUT)
+GPIO.output(22, True)
+```
+
+This will turn off the green LED using gpiozero
+```Python
+from gpiozero import LED
+led = LED(22)
+led.on()
+```
 
 # Additional information
 The Flick boards use the MGC3130 3D gesture controller based on Microchip's patented Gestic© technology. You can find more [Microchips's website](http://www.microchip.com/design-centers/capacitive-touch-sensing/gestic-technology/overview)

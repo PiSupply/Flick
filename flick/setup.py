@@ -49,5 +49,6 @@ setup(
     url             = 'http://www.pisupply.com',
     classifiers     = classifiers,
     py_modules      = ['flicklib','i2c'],
-    install_requires= ['RPi.GPIO']
+    install_requires= ['RPi.GPIO'],
+    scripts         = ['../bin/flick-demo']
 )
