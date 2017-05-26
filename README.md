@@ -66,5 +66,6 @@ led.on()
 ```
 
 # Additional information
-The Flick boards use the MGC3130 3D gesture controller based on Microchip's patented Gestic© technology. You can find more [Microchips's website](http://www.microchip.com/design-centers/capacitive-touch-sensing/gestic-technology/overview)
+The Flick boards use the MGC3130 3D gesture controller based on Microchip's patented Gestic© technology. You can find more at [Microchips's website](http://www.microchip.com/design-centers/capacitive-touch-sensing/gestic-technology/overview)
 
+The Flick boards can also be used with Microchip [Aurea Software Package](http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en565745) and the [MGC3130 Development Kit Hillstar](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=dm160218). The Aurea comes with a demo application which can be used to test the boards. It also has a mouse emulator and a media player controller.
