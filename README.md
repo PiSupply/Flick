@@ -13,7 +13,7 @@ curl -sSL https://pisupp.ly/flickcode | sudo bash
 # Command Line
 ```bash
 # Run a demo script to test the various gestures
-python ~/Flick/flick/flickdemo.py
+flick-demo
 ```
 
 # Hardware tips
