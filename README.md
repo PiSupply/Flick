@@ -17,9 +17,9 @@ python ~/Flick/flick/flickdemo.py
 ```
 
 # Hardware tips
-You can find a full quick start guide at the [Maker Zone Flick Quick Start and FAQ](https://www.pi-supply.com/make/flick-quick-start-faq) where we also provided a pinout diagram for all the boards.
+You can find a full quick start guide at the [Maker Zone Flick Quick Start and FAQ](https://www.pi-supply.com/make/flick-quick-start-faq) where we have also provided a pinout diagram for all of the boards.
 
-## Flick large pin mapping 
+## Flick Large pin mapping 
 We arranged the connectivity so that only the pins on the left side of Raspberry Pi's header are required to be connected to the Flick Large.
 
 **Flick -> Raspberry Pi**
@@ -33,9 +33,8 @@ SCL          -> Pin 5
 SDA          -> Pin 3
 VCC          -> Pin 1
 ```
-### Controlling the dual LED on Flick large
-We have provided a dual LED for additional customisable feedback on the Flick large. The red LED is connected to Pin 15/GPIO22 whereas the green LED is connected to Pin7/GPIO4.
-You can drive these LEDs programmatically or via the command line.
+### Controlling the dual LED on Flick Large
+We have provided a dual LED for additional customisable feedback on the Flick Large. The red LED is connected to Pin 15/GPIO22 whereas the green LED is connected to Pin 7/GPIO4. You can drive these LEDs programmatically or via the command line.
 
 #### Bash
 This will turn on the green LED
