@@ -295,7 +295,7 @@ def _read_msg(len=132):
         except IOError:
             io_error_count += 1
             if io_error_count > 10:
-                raise Exception("Skywriter encoutered nore than 10 consecutive I2C IO errors!")
+                raise Exception("Flick encoutered more than 10 consecutive I2C IO errors!")
             return [0,0,0,0,0,0,0,0,0]
         finally:
             GPIO.setup(SW_XFER_PIN, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -419,7 +419,7 @@ def double_tap(*args, **kwargs):
 def garbage():
     '''Bind an action to the "garbage" gesture
 
-    A sort of grab-and-throw-away-garbage above the Skywriter
+    A sort of grab-and-throw-away-garbage above Flick
     '''
     def register(handler):
         global _on_garbage
@@ -433,7 +433,7 @@ def move():
 
     The handler will receive x, y and z values
     describing the tracked finger in 3D space above
-    the Skywriter.
+    Flick.
     '''
     def register(handler):
         global _on_move
@@ -445,7 +445,7 @@ def move():
 def airwheel():
     '''Bind an action to the "airhweel" gesture
 
-    Point your finger at the Skywriter and spin it in a wheel
+    Point your finger at Flick and spin it in a wheel
     The handler will receive a rotation delta in degrees
     '''
     def register(handler):
