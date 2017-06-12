@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 #Check if script is being run as root
 if [ "$(id -u)" != "0" ]; then
@@ -9,7 +10,8 @@ fi
 if [ ! $? = 0 ]; then
    exit 1
 else
-   apt-get install git whiptail #Installs packages which might be missing
+  #Installs packages which might be missing
+   apt-get install -y git whiptail
 
    # enable I2C
    raspi-config nonint do_i2c 0
