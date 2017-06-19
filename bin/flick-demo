@@ -93,7 +93,9 @@ def main(stdscr):
     fwwin.addstr(4, 2, 'Library Loader Version: ' + str(fw_info['LibLoaderVer'][0]) + '.' + str(fw_info['LibLoaderVer'][1]))
     fwwin.addstr(5, 2, 'Library Loader Platform: ' + 'Hillstar' if fw_info['LibLoaderPlatform'] == 21 else 'Woodstar')
     fwwin.addstr(6, 2, 'Firmware Start Addr: 0x' + '{:04x}'.format(fw_info['FwStartAddr']))
-    fwwin.addstr(7, 2, 'Firmware Version: ' + fw_info['FwVersion'])
+    fwver_part1, fwver_part2 = fw_info['FwVersion'].split(';DSP:')
+    fwwin.addstr(7, 2, 'Firmware Version: ' + fwver_part1)
+    fwwin.addstr(8, 2, 'DSP: ' + fwver_part2)
     fwwin.refresh()
 
     # Update data window continuously until Control-C
