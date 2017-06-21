@@ -68,3 +68,9 @@ led.on()
 The Flick boards use the MGC3130 3D gesture controller based on Microchip's patented Gestic© technology. You can find more information at [Microchips's website](http://www.microchip.com/design-centers/capacitive-touch-sensing/gestic-technology/overview)
 
 The Flick boards can also be used with the Microchip [Aurea Software Package](http://www.microchip.com/mymicrochip/filehandler.aspx?ddocname=en565745) and the [MGC3130 Hillstar Development Kit](http://www.microchip.com/DevelopmentTools/ProductDetails.aspx?PartNO=dm160218). The Hillstar Development kit contains a USB to I2C interface board which allows you to connect the Flick boards (via a jumper cable) to a PC. The Aurea software comes with a demo application which can be used to test the boards and program new firmware. It also has a mouse emulator and a media player controller.
+
+# Third party software libraries
+
+It is safe to say we have an awesome and growing community of people adding gesture sensing to their projects with Flick and we get a huge amount of contributions of code, some of which we can easily integrate here and others which we can't (we are only a small team). However we want to make sure that any contributions are easy to find, for anyone looking. So here is a list of other software libraries that might be useful to you (if you have one of your own, please visit the ["Issues"](https://github.com/PiSupply/Flick/issues) tab above and let us know!):
+
+* [Send Flick data to MQTT and Philips Hue Lamp Control](https://github.com/unixweb/Flick) and there is also an accompanying blog post [here](https://blog.unixweb.de/3d-gestensteuerung-mit-flick/)
