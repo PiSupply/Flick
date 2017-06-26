@@ -21,4 +21,4 @@ And then install the library with:
 sudo python setup.py install
 ```
 
-There is a demo program in the examples directory
+There are demo programs in the bin directory

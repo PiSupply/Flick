@@ -14,6 +14,12 @@ curl -sSL https://pisupp.ly/flickcode | sudo bash
 ```bash
 # Run a demo script to test the various gestures
 flick-demo
+
+# A nice way to move a snail on the screen. Flick left, right, up or down to move @
+flick-snail
+ 
+# A volume controller based on the Airwheel gesture
+flick-volctrl
 ```
 
 # Hardware tips
