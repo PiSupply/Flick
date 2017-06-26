@@ -87,14 +87,14 @@ def main(stdscr):
     # Fill firmware info window.
     fwwin.erase()
     fwwin.border()
-    fwwin.addstr(1, 2, 'Firmware valid: ' + 'Yes' if fw_info['FwValid'] == 0xaa else 'No')
+    fwwin.addstr(1, 2, 'firmware valid: ' + 'Yes' if fw_info['FwValid'] == 0xaa else 'No')
     fwwin.addstr(2, 2, 'Hardware Revison: ' + str(fw_info['HwRev'][0]) + '.' + str(fw_info['HwRev'][1]))
     fwwin.addstr(3, 2, 'Params Start Addr: ' + '0x{:04x}'.format(fw_info['ParamStartAddr']))
     fwwin.addstr(4, 2, 'Library Loader Version: ' + str(fw_info['LibLoaderVer'][0]) + '.' + str(fw_info['LibLoaderVer'][1]))
     fwwin.addstr(5, 2, 'Library Loader Platform: ' + 'Hillstar' if fw_info['LibLoaderPlatform'] == 21 else 'Woodstar')
-    fwwin.addstr(6, 2, 'Firmware Start Addr: 0x' + '{:04x}'.format(fw_info['FwStartAddr']))
+    fwwin.addstr(6, 2, 'firmware Start Addr: 0x' + '{:04x}'.format(fw_info['FwStartAddr']))
     fwver_part1, fwver_part2 = fw_info['FwVersion'].split(';DSP:')
-    fwwin.addstr(7, 2, 'Firmware Version: ' + fwver_part1)
+    fwwin.addstr(7, 2, 'firmware Version: ' + fwver_part1)
     fwwin.addstr(8, 2, 'DSP: ' + fwver_part2)
     fwwin.refresh()
 
