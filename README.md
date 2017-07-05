@@ -80,5 +80,4 @@ The Flick boards can also be used with the Microchip [Aurea Software Package](ht
 It is safe to say we have an awesome and growing community of people adding gesture sensing to their projects with Flick and we get a huge amount of contributions of code, some of which we can easily integrate here and others which we can't (we are only a small team). However we want to make sure that any contributions are easy to find, for anyone looking. So here is a list of other software libraries that might be useful to you (if you have one of your own, please visit the ["Issues"](https://github.com/PiSupply/Flick/issues) tab above and let us know!):
 
 * [Send Flick data to MQTT and Philips Hue Lamp Control](https://github.com/unixweb/Flick) and there is also an accompanying blog post [here](https://blog.unixweb.de/3d-gestensteuerung-mit-flick/)
-
 * [Image Flick Demo Using Pygame](https://github.com/ric96/flick-image)
