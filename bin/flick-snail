@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+# Author: Russel Davis @ukscone
+
 import flicklib
 import time
 import curses
