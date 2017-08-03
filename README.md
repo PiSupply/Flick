@@ -20,10 +20,22 @@ flick-snail
  
 # A volume controller based on the Airwheel gesture
 flick-volctrl
+
+# 2048 game (Requires Pimoroni Unicorn HAT)
+flick-2048
+
+# Gesture demo (Requires Raspberry Pi Sense HAT)
+flick-sense
 ```
 
 # Hardware tips
 You can find a full quick start guide at the [Maker Zone Flick Quick Start and FAQ](https://www.pi-supply.com/make/flick-quick-start-faq) where we have also provided a pinout diagram for all of the boards.
+
+Tpo verify that your Flick is available on the I2C bus run
+```bash
+sudo i2cdetect -y 1
+```
+You should get a grid like matrix where the number 0x42 represents the address of your Flick board. Should the numnber not be visible check that I2C has been enabled or that the cabling has been properly done in the case of the Flick Large.
 
 ## Flick Large pin mapping 
 We arranged the connectivity so that only the pins on the left side of Raspberry Pi's header are required to be connected to the Flick Large.
