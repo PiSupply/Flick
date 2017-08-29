@@ -1,11 +1,14 @@
 #!/usr/bin/env python
-# Requires sudo apt-get install python-alsaaudio
-
-import alsaaudio 
 import flicklib
 import time
 import curses
 from curses import wrapper
+
+# Requires sudo apt-get install python-alsaaudio
+try:
+    import alsaaudio 
+except ImportError:
+    exit("This library requires the alsaaudio module")
 
 some_value = 5000
 
