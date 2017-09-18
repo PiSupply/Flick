@@ -50,5 +50,5 @@ setup(
     classifiers     = classifiers,
     py_modules      = ['flicklib','i2c'],
     install_requires= ['RPi.GPIO'],
-    scripts         = ['../bin/flick-2048', '../bin/flick-demo', '../bin/flick-snail', '../bin/flick-sense', '../bin/flick-volctrl']
+    scripts         = ['../bin/flick-armcontrol', '../bin/flick-2048', '../bin/flick-demo', '../bin/flick-snail', '../bin/flick-sense', '../bin/flick-volctrl']
 )

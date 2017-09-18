@@ -12,6 +12,9 @@ curl -sSL https://pisupp.ly/flickcode | sudo bash
 
 # Command Line
 ```bash
+# Drive [USB Controlled Robotic Arm Construction Kit](https://www.maplin.co.uk/p/usb-controlled-robotic-arm-construction-kit-a37jn?cmpid=ppc:pim_products:pla:google&gclid=EAIaIQobChMI6de91Nuu1gIV6LftCh2x4Q6DEAQYAyABEgIXMPD_BwE&gclsrc=aw.ds) with gesture
+flick-armcontrol
+
 # Run a demo script to test the various gestures
 flick-demo
 
