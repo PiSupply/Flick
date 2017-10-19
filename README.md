@@ -1,4 +1,4 @@
-![Alt text](https://user-images.githubusercontent.com/16068311/30544599-f0c3570e-9c7e-11e7-9f3f-74282a271749.png?raw=true "Optional Title")
+![Alt text](https://user-images.githubusercontent.com/16068311/30544599-f0c3570e-9c7e-11e7-9f3f-74282a271749.png?raw=true "Flick Logo")
 # Flick
 This repository contains software and resources for the [Flick range](https://pisupp.ly/flick1) of gesture sensing and 3D tracking add on boards (and cases) for the Raspberry Pi and standalone applications (and soon BeagleBone, Arduino and more!). Brought to you by [Pi Supply](https://www.pi-supply.com)
 
