@@ -98,3 +98,4 @@ It is safe to say we have an awesome and growing community of people adding gest
 * [Send Flick data to MQTT and Philips Hue Lamp Control](https://github.com/unixweb/Flick) and there is also an accompanying blog post [here](https://blog.unixweb.de/3d-gestensteuerung-mit-flick/)
 * [Image Flick Demo Using Pygame](https://github.com/ric96/flick-image)
 * [Make Your Own DIY 3D Gesture and Tracking USB MIDI Controller](https://ask.audio/articles/make-your-own-diy-3d-gesture-and-tracking-usb-midi-controller) and the related code available [here](https://macprovid.vo.llnwd.net/o43/hub/media/1143/14295/Teensy_code.zip)
+8 [Holographic Audio Visualizer with Motion Control](https://www.hackster.io/hackerhouse/holographic-audio-visualizer-with-motion-control-e72fee) by our good friends at Hacker House!
