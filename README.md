@@ -45,7 +45,7 @@ You should get a grid like matrix where the number 0x42 represents the address o
 We arranged the connectivity so that only the pins on the left side of Raspberry Pi's header are required to be connected to the Flick Large.
 
 **Flick -> Raspberry Pi**
-```bash
+```
 LED2 (Red)   -> Pin 15
 LED1 (Green) -> Pin 7
 GND          -> Pin 9
