@@ -99,3 +99,4 @@ It is safe to say we have an awesome and growing community of people adding gest
 * [Image Flick Demo Using Pygame](https://github.com/ric96/flick-image)
 * [Make Your Own DIY 3D Gesture and Tracking USB MIDI Controller](https://ask.audio/articles/make-your-own-diy-3d-gesture-and-tracking-usb-midi-controller) and the related code available [here](https://macprovid.vo.llnwd.net/o43/hub/media/1143/14295/Teensy_code.zip)
 * [Holographic Audio Visualizer with Motion Control](https://www.hackster.io/hackerhouse/holographic-audio-visualizer-with-motion-control-e72fee) by our good friends at Hacker House!
+* [Maze Controlled by Flick Shield on Raspberry Pi](https://gist.github.com/tomvdb/251de94880ee6de8fe251955fbe4066c) by Tom Van den Bon. Video also on Tom's [Twitter](https://twitter.com/geekc0der/status/877965027000459264) and also featured on Raspberry Pi [blog](https://www.raspberrypi.org/blog/flick-marble-maze/).
