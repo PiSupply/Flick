@@ -35,7 +35,7 @@ flick-sense
 # Hardware tips
 You can find a full quick start guide at the [Maker Zone Flick Quick Start and FAQ](https://www.pi-supply.com/make/flick-quick-start-faq) where we have also provided a pinout diagram for all of the boards.
 
-Tpo verify that your Flick is available on the I2C bus run
+To verify that your Flick is available on the I2C bus run
 ```bash
 sudo i2cdetect -y 1
 ```
