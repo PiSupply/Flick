@@ -39,11 +39,9 @@ To verify that your Flick is available on the I2C bus run
 ```bash
 i2cdetect -y 1
 ```
-You should get a grid like matrix where the number 0x42 represents the address of your Flick board. Should the numnber not be visible check that I2C has been enabled or that the cabling has been properly done in the case of the Flick Large.
+You should get a grid like matrix where the number 0x42 represents the address of your Flick board. Should the number not be visible check that I2C has been enabled or that the cabling has been properly done in the case of the Flick Large.
 
-Note: This does not work immediately after boot.
-The chip on the Flick board first has to be reset by a low pulse on GPIO 17 before i2c detection will work.
-If you have the gpio program installed (`sudo apt-get install wiringpi`) then use the following one-liner to reset the Flick and check its presence immediately after boot:
+Note: This does not work immediately after boot. The chip on the Flick board first has to be reset by a low pulse on GPIO 17 before i2c detection will work. If you have the gpio program installed (`sudo apt-get install wiringpi`) then use the following one-liner to reset the Flick and check its presence immediately after boot:
 ```bash
 gpio mode 17 out; gpio write 17 0; gpio write 17 1; i2cdetect -y 1
 ```
