@@ -46,16 +46,22 @@ def main(stdscr):
     stdscr.refresh()
 
     # Setup the mixer
-    for i in range(len(alsaaudio.cards())):  # Finds the JustBoom card or default to onboard
+    cardId = -1
+    for i in range(len(alsaaudio.cards())):      # Find the JustBoom card
         if (alsaaudio.cards()[i] == 'sndrpiboomberry' or alsaaudio.cards()[i] == 'sndrpijustboomd'):
             card = 'JustBoom DAC'
             control = 'Digital'
             cardId = i
             break
-        else:
-            card = 'bcm2835 ALSA'
-            control = 'PCM'
-            cardId = i
+    if cardId == -1:                             # JustBoom card not found
+        for i in range(len(alsaaudio.cards())):  # Find the default onboard 'ALSA' card
+            if (alsaaudio.cards()[i] == 'ALSA'):
+                card = 'bcm2835 ALSA'
+                control = 'PCM'
+                cardId = i
+                break
+    if cardId == -1:
+        exit("Compatible audio card not found")
     try:
         mixer = alsaaudio.Mixer(control=control, cardindex=cardId)
     except:
