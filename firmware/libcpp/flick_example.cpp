@@ -114,9 +114,10 @@ int main(void) {
 	flick.airWheelCallback = airwheelCb;
 	flick.xyzCallback = onXYZCb;
 	flick.gestureCallback = onGestureCb;
-	usleep(250000);
-	int ret = flick.SetRuntimeParameter(0x80, 0x1b, 0x1F); // disable calibration
-	//printf("ret: %d \n", ret);
+	usleep(250000);	
+        int ret = flick.SetRuntimeParameter(0xa1, 0x1f, 0xFFFFFFFF); // lock data output   <-----
+        ret = flick.SetRuntimeParameter(0x80, 0x1b, 0x1F); // disable calibration
+        //printf("ret: %d \n", ret);	
 
 	while (1) {
 		flick.Poll();
