@@ -49,7 +49,6 @@ def switch_slide(action):
 @flicklib.flick()
 def flick(start, finish):
     global direction
-    flicktxt = start + ' - ' + finish
     if finish == "east":
        direction = "r"
     elif finish == "west":
@@ -64,8 +63,7 @@ def main():
     while True:
         direction = ""
         while direction == "":
-            if (direction != "l") and (direction != "r"):
-                direction = ""
+            sleep(0.1)
 
         if direction == "r":
             switch_slide('next')
