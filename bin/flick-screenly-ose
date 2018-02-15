@@ -46,24 +46,29 @@ def switch_slide(action):
     return
 
 
-@flicklib.move()
-def move(x, y, z):
-    global xyz
-    xyz = [x, y, z]
+@flicklib.flick()
+def flick(start, finish):
+    global direction
+    if finish == "east":
+       direction = "r"
+    elif finish == "west":
+       direction = "l"
+    else:
+        pass
 
 
 def main():
-    global xyz
-    xyz = [0, 0, 0]
-    old_xyz = [0, 0, 0]
+    global direction
 
     while True:
-        if xyz[0] > old_xyz[0]:
+        direction = ""
+        while direction == "":
+            sleep(0.1)
+
+        if direction == "r":
             switch_slide('next')
-        elif xyz[0] < old_xyz[0]:
+        elif direction == "l":
             switch_slide('previous')
-        old_xyz = copy(xyz)
-        sleep(0.3)
 
 
 if __name__ == "__main__":
