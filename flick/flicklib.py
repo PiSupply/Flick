@@ -37,7 +37,7 @@ if GPIO.RPI_REVISION == 2 or GPIO.RPI_REVISION == 3:
     i2c_bus = 1
 
 i2cm = i2c.I2CMaster(i2c_bus)
- 
+
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(SW_RESET_PIN, GPIO.OUT, initial=GPIO.HIGH)
@@ -96,7 +96,7 @@ class StoppableThread(threading.Thread):
     def __init__(self):
         threading.Thread.__init__(self)
         self.stop_event = threading.Event()
-        self.daemon = True                 
+        self.daemon = True
 
     def start(self):
         if self.isAlive() == False:
@@ -129,28 +129,28 @@ class AsyncWorker(StoppableThread):
 
 def _handle_sensor_data(data):
     global _lastrotation, rotation
-    
+
     d_configmask = data.pop(0) | data.pop(0) << 8
     d_timestamp = data.pop(0) # 200hz, 8-bit counter, max ~1.25sec
     d_sysinfo = data.pop(0)
-    
+
     d_dspstatus = data[0:2]
     d_gesture = data[2:6]
     d_touch = data[6:10]
     d_airwheel = data[10:12]
     d_xyz = data[12:20]
     d_noisepow = data[20:24]
- 
+
     if d_configmask & SW_DATA_XYZ and d_sysinfo & 0b0000001:
         # We have xyz info, and it's valid
         x, y, z = (
             (d_xyz[1] << 8 | d_xyz[0]) / 65536.0,
             (d_xyz[3] << 8 | d_xyz[2]) / 65536.0,
             (d_xyz[5] << 8 | d_xyz[4]) / 65536.0
-        ) 
+        )
         if callable(_on_move):
             _on_move(x, y, z)
-    
+
     if d_configmask & SW_DATA_GESTURE and not d_gesture[0] == 0:
         # We have a gesture!
         is_edge = (d_gesture[3] & 0b00000001) > 0
@@ -238,10 +238,10 @@ def _handle_sensor_data(data):
     if d_configmask & SW_DATA_AIRWHEEL and d_sysinfo & 0b00000010:
         # Airwheel
         delta = (d_airwheel[0] - _lastrotation) / 32.0
-        
+
         # Delta is in degrees, with 1 = full 360 degree rotation
         # Positive numbers equal clockwise delta, negative are counter-clockwise
-        
+
         if delta != 0 and delta > -0.5 and delta < 0.5:
             if callable(_on_airwheel):
                 _on_airwheel(delta * 360.0)
@@ -476,7 +476,7 @@ d_seq   = data.pop(0)
 d_ident = data.pop(0)
 if (d_ident != 0x83):
     print('Did not receive firmware info')
-    sys.exit()
+    exit()
 _handle_firmware_info(data)
 
 time.sleep(0.2) # MGC3130 starts processing 200 msec after reset
