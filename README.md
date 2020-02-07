@@ -1,4 +1,4 @@
-![Alt text](https://user-images.githubusercontent.com/16068311/30544599-f0c3570e-9c7e-11e7-9f3f-74282a271749.png?raw=true "Flick Logo")
+![Alt text](https://user-images.githubusercontent.com/1878314/73880628-afad9f00-4856-11ea-975a-ec95b6ffacbe.png)
 # Flick
 This repository contains software and resources for the [Flick range](https://pisupp.ly/flick1) of gesture sensing and 3D tracking add on boards (and cases) for the Raspberry Pi and standalone applications (and soon BeagleBone, Arduino and more!). Brought to you by [Pi Supply](https://www.pi-supply.com)
 
@@ -21,7 +21,7 @@ flick-demo
 
 # A nice way to move a snail on the screen. Flick left, right, up or down to move @
 flick-snail
- 
+
 # A volume controller based on the Airwheel gesture
 flick-volctrl
 
@@ -46,7 +46,7 @@ Note: This does not work immediately after boot. The chip on the Flick board fir
 gpio mode 17 out; gpio write 17 0; gpio write 17 1; i2cdetect -y 1
 ```
 
-## Flick Large pin mapping 
+## Flick Large pin mapping
 We arranged the connectivity so that only the pins on the left side of Raspberry Pi's header are required to be connected to the Flick Large.
 
 **Flick -> Raspberry Pi**
