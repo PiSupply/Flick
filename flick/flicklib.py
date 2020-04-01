@@ -10,7 +10,7 @@ try:
 except ImportError:
     exit("This library requires the RPi.GPIO module\nInstall with: sudo pip install RPi.GPIO")
 
-__version__ = '0.0.1'
+__version__ = '0.0.2'
 
 SW_ADDR		= 0x42
 SW_RESET_PIN	= 17
@@ -121,6 +121,9 @@ class AsyncWorker(StoppableThread):
     def __init__(self, todo):
         StoppableThread.__init__(self)
         self.todo = todo
+
+    def stop(self):
+        self.stop_event.set()
 
     def run(self):
         while self.stop_event.is_set() == False:
@@ -328,7 +331,9 @@ def _start_poll():
 
 def _stop_poll():
     global _worker
-    _worker.stop()
+    if _worker is not None:
+        _worker.stop()
+        _worker = None
 
 def get_arg(args, arg, default = None):
     if arg in args.keys():
@@ -477,7 +482,7 @@ d_seq   = data.pop(0)
 d_ident = data.pop(0)
 if (d_ident != 0x83):
     print('Did not receive firmware info')
-    sys.exit()
+    exit()
 _handle_firmware_info(data)
 
 time.sleep(0.2) # MGC3130 starts processing 200 msec after reset

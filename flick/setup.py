@@ -39,9 +39,9 @@ classifiers = ['Development Status :: 5 - Production/Stable',
 
 setup(
     name            = 'flicklib',
-    version         = '0.0.1',
-    author          = 'Ton van Overbeek',
-    author_email    = 'tvoverbeek@gmail.com',
+    version         = '0.0.3',
+    author          = 'Ton van Overbeek, Ryan Walmsley',
+    author_email    = 'tvoverbeek@gmail.com, ryan@pi-supply.com',
     description     = 'Flick HAT, Flick Zero and Flick Large Driver',
     long_description= open('README.txt').read() + open('CHANGELOG.txt').read(),
     license         = 'MIT',
