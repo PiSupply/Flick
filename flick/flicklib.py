@@ -2,6 +2,7 @@ import atexit
 import threading
 import time
 from sys import exit, version_info
+import sys
 import i2c
 
 try:
@@ -476,7 +477,7 @@ d_seq   = data.pop(0)
 d_ident = data.pop(0)
 if (d_ident != 0x83):
     print('Did not receive firmware info')
-    exit()
+    sys.exit()
 _handle_firmware_info(data)
 
 time.sleep(0.2) # MGC3130 starts processing 200 msec after reset
