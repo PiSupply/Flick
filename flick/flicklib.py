@@ -34,7 +34,7 @@ SW_SENSOR_DATA   = 0x91
 
 i2c_bus = 1
 
-if GPIO.RPI_REVISION != 1:
+if GPIO.RPI_REVISION == 1:
     i2c_bus = 0
 
 i2cm = i2c.I2CMaster(i2c_bus)
