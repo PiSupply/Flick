@@ -43,7 +43,7 @@ You should get a grid like matrix where the number 0x42 represents the address o
 
 Note: This does not work immediately after boot. The chip on the Flick board first has to be reset by a low pulse on GPIO 17 before i2c detection will work. If you have the gpio program installed (`sudo apt-get install wiringpi`) then use the following one-liner to reset the Flick and check its presence immediately after boot:
 ```bash
-gpio mode 17 out; gpio write 17 0; gpio write 17 1; i2cdetect -y 1
+gpio mode 0 out; gpio write 0 0; gpio write 0 1; i2cdetect -y 1
 ```
 
 ## Flick Large pin mapping
