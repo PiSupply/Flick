@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import signal
 import flicklib
@@ -47,8 +47,8 @@ def spinny(delta):
         time.sleep(0.5)
     arm.reset()
     if delta > 0:
-	arm.moveBase(1)
-	time.sleep(0.5)
+	    arm.moveBase(1)
+	    time.sleep(0.5)
     arm.reset()
     if some_value < 0:
         some_value = 0

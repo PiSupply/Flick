@@ -1,5 +1,5 @@
 # Adapted from https://github.com/quick2wire/quick2wire-python-api
-# And packaged into an i2c only module for convinience
+# And packaged into an i2c only module for convenience
 
 # Warning: not part of the published Quick2Wire API.
 #

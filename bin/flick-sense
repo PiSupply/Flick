@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import sys
 import time
@@ -269,30 +269,30 @@ def main(argv):
     # This loop prints on the screen the values coming from the events and keeps the program running until CTRL^C
     while True:
         if len(xyztxt) > 0:
-            print 'xyz: ' + xyztxt
+            print('xyz: ' + xyztxt)
             show_image('xyz', xyz)
             xyztxt = ''
         if len(flicktxt) > 0:
-            print 'Flick: ' + flicktxt
+            print('Flick: ' + flicktxt)
             show_image('flick', flicktxt)
             flicktxt = ''
         if len(airwheeltxt) > 0:
-            print 'Airwheel: ' + airwheeltxt
+            print('Airwheel: ' + airwheeltxt)
             if airwheel >= 0:
                 show_image('airwheel', 'clock')
             else:
                 show_image('airwheel', 'cclock')
             airwheeltxt = ''
         if len(touchtxt) > 0:
-            print 'Touch: ' + touchtxt
+            print('Touch: ' + touchtxt)
             show_image('touch', touchtxt)
             touchtxt = ''
         if len(taptxt) > 0:
-            print 'Tap: ' + taptxt
+            print('Tap: ' + taptxt)
             show_image('tap', taptxt)
             taptxt = ''
         if len(doubletaptxt) > 0:
-            print 'Double Tap: ' + doubletaptxt
+            print('Double Tap: ' + doubletaptxt)
             show_image('doubletap', doubletaptxt)
             doubletaptxt = ''
         time.sleep(0.1)
