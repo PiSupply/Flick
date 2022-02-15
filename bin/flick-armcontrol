@@ -107,9 +107,9 @@ def main(stdscr):
     exittxt = 'Control-C to exit'
     title = '**** Maplin Robotic Arm Control  ****'
     Instr = '**** Instructions ****'
-    stdscr.addstr( 0, (curses.COLS - len(title)) / 2, title)
-    stdscr.addstr( 9, (curses.COLS - len(exittxt)) / 2, exittxt)
-    stdscr.addstr( 11, (curses.COLS - len(Instr)) / 2, Instr)
+    stdscr.addstr( 0, (curses.COLS - len(title)) // 2, title)
+    stdscr.addstr( 9, (curses.COLS - len(exittxt)) // 2, exittxt)
+    stdscr.addstr( 11, (curses.COLS - len(Instr)) // 2, Instr)
     stdscr.refresh()
 
     datawin = curses.newwin( 6, curses.COLS - 6,  2, 3)
