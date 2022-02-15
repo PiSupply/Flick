@@ -75,8 +75,8 @@ def main(stdscr):
     # Add title and footer
     exittxt = 'Control-C to exit'
     title = '**** Flick Demo ****'
-    stdscr.addstr( 0, (curses.COLS - len(title)) / 2, title)
-    stdscr.addstr(22, (curses.COLS - len(exittxt)) / 2, exittxt)
+    stdscr.addstr( 0, (curses.COLS - len(title)) // 2, title)
+    stdscr.addstr(22, (curses.COLS - len(exittxt)) // 2, exittxt)
     stdscr.refresh()
 
     fw_info = flicklib.getfwinfo()
